@@ -1,6 +1,10 @@
 #include<stdio.h>
 /**
-* Description: Prints "Programming is like building a multilingual puzzle" to the std output*/
+* main - entry point
+* Description: Prints "Programming is like building a multilingual puzzle"
+* to the std output
+* Return: 0
+*/
 
 int main(void)
 {
