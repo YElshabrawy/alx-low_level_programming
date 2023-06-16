@@ -11,8 +11,9 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i < 26; i++){
-		if('a' + i == 'e' || 'a' + i == 'q')
+	for (i = 0; i < 26; i++)
+	{
+		if ('a' + i == 'e' || 'a' + i == 'q')
 			continue;
 		putchar('a' + i);
 	}
