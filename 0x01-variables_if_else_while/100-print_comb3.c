@@ -1,10 +1,7 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
 * main - entry point
-* Description: Printz from a to z
+* Description: Prints all possible different combinations of two digits.
 * Return: 0
 */
 int main(void)
