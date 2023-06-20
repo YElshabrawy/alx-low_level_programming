@@ -22,5 +22,6 @@ int main(void)
 			printf(", ");
 		c++;
 	}
+	printf("\n");
 	return (0);
 }
