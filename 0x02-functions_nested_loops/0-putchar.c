@@ -1,12 +1,17 @@
-#include<stdio.h>
+#include "main.h"
 /**
  * main - entry point
- * Desctiotion: no description
+ * Description: prints _putchar to the std output
  * Return: 0
 */
 
 int main(void)
 {
-	printf("_putchar\n");
-	return (0);
+    char str[] = "_putchar\n";
+    int i;
+
+    for (i = 0; i < (int)sizeof(str) - 1; i++)
+        _putchar(str[i]);
+
+    return (0);
 }
