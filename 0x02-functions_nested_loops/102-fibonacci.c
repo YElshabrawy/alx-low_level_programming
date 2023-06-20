@@ -18,9 +18,9 @@ int main(void)
 		printf("%ld", res);
 		n1 = n2;
 		n2 = res;
-		c++;
 		if (c != 50 - 1)
 			printf(", ");
+		c++;
 	}
 	return (0);
 }
