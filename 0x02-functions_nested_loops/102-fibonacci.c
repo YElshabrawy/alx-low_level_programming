@@ -7,15 +7,15 @@
 
 int main(void)
 {
-	int n1 = 0, n2 = 1, c = 2;
+	long n1 = 1, n2 = 2, res;
+	int c = 2;
 
-	printf("%d, ", n1);
-	printf("%d, ", n2);
+	printf("%ld, ", n1);
+	printf("%ld, ", n2);
 	while (c < 50)
 	{
-		int res = n1 + n2;
-
-		printf("%d", res);
+		res = n1 + n2;
+		printf("%ld", res);
 		n1 = n2;
 		n2 = res;
 		c++;
