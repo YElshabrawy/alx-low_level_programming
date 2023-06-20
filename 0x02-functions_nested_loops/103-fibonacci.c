@@ -7,18 +7,16 @@
 
 int main(void)
 {
-	long n1 = 1, n2 = 2, res;
-	long sum = 2;
+	unsigned long prev = 0, curr = 1, next, sum = 0;
 
-	while (1)
+	while (curr <= 4000000)
 	{
-		res = n1 + n2;
-		sum += res;
-		n1 = n2;
-		n2 = res;
-		if (res > 4000000)
-			break;
+		next = prev + curr;
+		prev = curr;
+		curr = next;
+		if(curr % 2 == 0)
+			sum += curr;
 	}
-	printf("%ld\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
