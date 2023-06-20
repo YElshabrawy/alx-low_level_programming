@@ -14,7 +14,7 @@ int main(void)
 		next = prev + curr;
 		prev = curr;
 		curr = next;
-		if(curr % 2 == 0)
+		if (curr % 2 == 0)
 			sum += curr;
 	}
 	printf("%lu\n", sum);
