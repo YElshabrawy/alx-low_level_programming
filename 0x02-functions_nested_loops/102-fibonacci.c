@@ -7,13 +7,18 @@
 
 int main (void)
 {
-	int i;
-
-	for(i = 0; i <= 50; i++){
-		if(i <= 2)
-			printf("%d, ", i);
-		else
-			printf("%d, ", (i - 1) + (i - 2));
+	int n1 = 0 , n2 = 1, c = 2;
+	printf("%d, ", n1);
+	printf("%d, ", n2);
+	while (c < 50)
+	{
+		int res = n1 + n2;
+		printf("%d", res);
+		n1 = n2;
+		n2 = res;
+		c++;
+		if(c != 50 -1)
+			printf(", ");
 	}
 	return (0);
 }
