@@ -2,13 +2,13 @@
 #include <string.h>
 
 /**
- * reverse_string - function that reverses a string
+ * rev_string - function that reverses a string
  * Description: reverses a string
  * @str: the string to be reversed
  * Return: pointer to the reversed string
 */
 
-char *reverse_string(char *str)
+char *rev_string(char *str)
 {
 	char *left = str;
 	char *right = str + strlen(str) - 1;
@@ -26,7 +26,7 @@ char *reverse_string(char *str)
 }
 
 /**
- * add_strings - adds two strings and returns the result
+ * add - adds two strings and returns the result
  *
  * Description: adds two strings and returns the result
  *
@@ -37,7 +37,7 @@ char *reverse_string(char *str)
  * Return: pointer to the string containing the result
 */
 
-char *add_strings(char *sum, const char *n1, const char *n2)
+char *add(char *sum, const char *n1, const char *n2)
 {
 	const char *ptr1 = n1 + strlen(n1) - 1;
 	const char *ptr2 = n2 + strlen(n2) - 1;
@@ -56,7 +56,7 @@ char *add_strings(char *sum, const char *n1, const char *n2)
 		carry = digit_sum / 10;
 	}
 	*ptr_sum = '\0';
-	return (reverse_string(sum));
+	return (rev_string(sum));
 }
 
 /**
@@ -75,7 +75,8 @@ int main(void)
 
 	for (i = 2; i < 100; i++)
 	{
-		printf("%s%s", add_strings(fib[2], fib[1], fib[0]), (i != 99) ? ", " : "\n");
+		printf("%s", add(fib[2], fib[1], fib[0]));
+		(i != 99) ? printf(", ") : printf("\n");
 		strcpy(fib[0], fib[1]);
 		strcpy(fib[1], fib[2]);
 	}
