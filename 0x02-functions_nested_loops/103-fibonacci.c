@@ -8,7 +8,7 @@
 int main(void)
 {
 	long n1 = 1, n2 = 2, res;
-	long long sum = 2;
+	long sum = 2;
 
 	while (1)
 	{
@@ -19,6 +19,6 @@ int main(void)
 		if (res > 4000000)
 			break;
 	}
-	printf("%lld\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
