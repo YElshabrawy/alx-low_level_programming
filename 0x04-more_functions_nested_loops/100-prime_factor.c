@@ -32,6 +32,6 @@ int main(void)
 		if (isPrime(i))
 			break;
 	}
-	printf("%lu", i);
+	printf("%lu\n", i);
 	return (0);
 }
