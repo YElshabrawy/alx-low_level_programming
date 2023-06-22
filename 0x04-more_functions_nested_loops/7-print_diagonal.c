@@ -9,8 +9,10 @@ void print_diagonal(int n)
 	int spc = 0;
 
 	if (n > 0)
-		while (n--){
+		while (n--)
+		{
 			int spc2 = spc;
+
 			while (spc2--)
 				_putchar(' ');
 			_putchar('\\');
