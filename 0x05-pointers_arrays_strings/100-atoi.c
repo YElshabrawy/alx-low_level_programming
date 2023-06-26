@@ -9,7 +9,7 @@ int _atoi(char *s)
 	unsigned int result = 0;
 	int sign = 1, i = 0;
 
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 			sign *= -1;
@@ -18,7 +18,7 @@ int _atoi(char *s)
 			result *= 10;
 			result += (s[i] - '0');
 		}
-		else if (result > 0) /* end of numbers, start of a new string or number did not reached yet*/
+		else if (result > 0)
 			break;
 		i++;
 	}
