@@ -23,7 +23,7 @@ void print_buffer(char *b, int size)
 		printf("%.8x: ", i);
 		for (j = i; c < 10; j++, c++)
 		{
-			(i + c < size) ? printf("%02x", b[j]) : printf(" ");
+			(i + c < size) ? printf("%02x", b[j]) : printf("  ");
 			(j % 2) ? printf(" ") : 0;
 		}
 		c = 0;
