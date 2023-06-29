@@ -10,6 +10,9 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
+		if (i == 0)
+			s[i] -= 32;
+
 		if (s[i + 1])
 		{
 			char c = s[i];
