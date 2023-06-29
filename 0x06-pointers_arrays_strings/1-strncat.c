@@ -1,7 +1,8 @@
 /**
-* *_strncat - concat 2 strings
+* _strncat - concat 2 strings
 * @dest: str 1 (destination)
 * @src: str 2
+* @n: cat val
 * Return: ptr to dest
 */
 
