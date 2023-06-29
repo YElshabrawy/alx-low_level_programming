@@ -9,7 +9,7 @@ char *_strcat(char *dest, char *src)
 {
 	int len1 = 0, i = 1;
 
-	while(dest[len1] != '\0')
+	while (dest[len1] != '\0')
 		len1++;
 
 	if (src[0])
