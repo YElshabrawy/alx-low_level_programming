@@ -5,7 +5,7 @@
 * @n: str len
 * Return: 1 if palendrome, 0 if not
 */
-int _palend_helper(char* s, int n)
+int _palend_helper(char *s, int n)
 {
 	if (n == 1)
 		return (1);
@@ -14,7 +14,7 @@ int _palend_helper(char* s, int n)
 	if (s[0] != s[n - 1])
 		return (0);
 
-	return _palend_helper(s + 1, n - 2);
+	return (_palend_helper(s + 1, n - 2));
 }
 
 /**
