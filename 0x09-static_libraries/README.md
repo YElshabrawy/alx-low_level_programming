@@ -7,7 +7,7 @@
 ar rc libname.a foo.o bar.o
 ```
 
-where `foo.o` and `bar.o` are the compiled versions of the c file containing the utility functions.
+where `foo.o` and `bar.o` are the compiled versions (gcc -c) of the c file containing the utility functions.
 - `r` flag is used to replace old libraries with same name
 - `c` flag is used to create the lib if it does not exist
 
