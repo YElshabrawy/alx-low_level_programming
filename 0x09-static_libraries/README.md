@@ -1,7 +1,7 @@
 # Notes
 ## How to create a static lib?
 - Using "ar" and "ranlib" commands
-1. Create the archive file
+### 1. Create the archive file
 
 ```
 ar rc libname.a foo.o bar.o
@@ -11,7 +11,7 @@ where `foo.o` and `bar.o` are the compiled versions of the c file containing the
 - `r` flag is used to replace old libraries with same name
 - `c` flag is used to create the lib if it does not exist
 
-2. Index it
+### 2. Index it
 After an archive (.a) file is created we need to index it:
 ```
 ranlib libname.a
