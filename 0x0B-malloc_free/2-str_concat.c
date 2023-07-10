@@ -9,13 +9,15 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, len1 = 0, len2 = 0;
 	char *result;
 
-	if (!s1 || !s2)
-		return (NULL);
+	if (s1)
+		len1 = strlen(s1);
+	if (s2)
+		len2 = strlen(s2);
 
-	result = (char *) malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	result = (char *) malloc(sizeof(char) * (len1 + len2 + 1));
 
 	if (!result)
 		return (NULL);
