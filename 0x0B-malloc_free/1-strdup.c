@@ -10,9 +10,14 @@
 char *_strdup(char *str)
 {
 	int i = 0;
-	char *duplicate = (char *) malloc(sizeof(char) * (strlen(str) + 1));
+	char *duplicate;
 
-	if (!duplicate || str == NULL)
+	if (!str)
+		return (NULL);
+
+	duplicate = (char *) malloc(sizeof(char) * (strlen(str) + 1));
+
+	if (!duplicate)
 		return (NULL);
 	while (str[i])
 	{
