@@ -1,16 +1,18 @@
 #include "dog.h"
 #include<string.h>
 #include<stdlib.h>
+
 /**
  * new_dog - copies dog
  * @name: name
  * @age: age
  * @owner: owner
- * Rerurn: dog ptr
+ * Return: dog ptr
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d2;
+
 	d2 = malloc(sizeof(dog_t));
 	if (!d2)
 		return (NULL);
@@ -31,5 +33,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	d2->owner = strcpy(d2->owner, owner);
 	d2->age = age;
-	return d2;
+	return (d2);
 }
