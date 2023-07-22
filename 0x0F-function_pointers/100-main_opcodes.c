@@ -16,13 +16,13 @@ int main(int argc, char **argv)
 		error(1);
 	}
 
-	if (argv[1] < 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
 		printf("Error\n");
 		error(2);
 	}
 
-	n = atoi(argv[1]);
 	for (i = 0; i < n; i++)
 	{
 		printf("%02hhx", ((char *)main)[i]);
