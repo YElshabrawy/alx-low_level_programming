@@ -11,11 +11,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list ptr;
 
-	if (n == 0 || !separator)
+	if (n == 0)
 	{
 		printf("\n");
 		return;
 	}
+	if (!separator)
+		return;
 
 	va_start(ptr, n);
 
