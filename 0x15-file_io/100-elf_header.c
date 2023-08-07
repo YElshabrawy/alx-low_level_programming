@@ -82,6 +82,32 @@ void print_version(Elf64_Ehdr h)
 	printf("\n");
 }
 /**
+ * print_osabi_more - prints elf header content
+ * @h: elf 64 header
+ * Return: void
+ */
+void print_osabi_more(Elf64_Ehdr h)
+{
+	switch (h.e_ident[EI_OSABI])
+	{
+		case ELFOSABI_MODESTO:
+			printf("Novell - Modesto");
+			break;
+		case ELFOSABI_OPENBSD:
+			printf("UNIX - OpenBSD");
+			break;
+		case ELFOSABI_STANDALONE:
+			printf("Standalone App");
+			break;
+		case ELFOSABI_ARM:
+			printf("ARM");
+			break;
+		default:
+			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
+			break;
+	}
+}
+/**
  * print_osabi - prints elf header content
  * @h: elf 64 header
  * Return: void
@@ -124,32 +150,7 @@ void print_osabi(Elf64_Ehdr h)
 	}
 	printf("\n");
 }
-/**
- * print_osabi_more - prints elf header content
- * @h: elf 64 header
- * Return: void
- */
-void print_osabi_more(Elf64_Ehdr h)
-{
-	switch (h.e_ident[EI_OSABI])
-	{
-		case ELFOSABI_MODESTO:
-			printf("Novell - Modesto");
-			break;
-		case ELFOSABI_OPENBSD:
-			printf("UNIX - OpenBSD");
-			break;
-		case ELFOSABI_STANDALONE:
-			printf("Standalone App");
-			break;
-		case ELFOSABI_ARM:
-			printf("ARM");
-			break;
-		default:
-			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
-			break;
-	}
-}
+
 /**
  * print_abiversion - prints elf header content
  * @h: elf 64 header
