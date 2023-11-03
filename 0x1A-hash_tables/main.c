@@ -3,6 +3,25 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
+void print_hash(hash_table_t *ht)
+{
+	unsigned long i;
+	hash_node_t *current;
+
+	for(i = 0; i < ht->size; i++){
+		printf("%lu\t", i);
+		current = ht->array[i];
+		while (current)
+		{
+			printf("%s",current->key);
+			if (current -> next)
+				printf (" -> ");
+			current = current->next;
+		}
+		printf("\n");
+	}
+}
+
 /**
  * main - check the code
  *
@@ -10,18 +29,13 @@
  */
 int main(void)
 {
-    char *s;
-    unsigned long int hash_table_array_size;
+    hash_table_t *ht;
 
-    hash_table_array_size = 1024;
-    s = "cisfun";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
-    s = "Don't forget to tweet today";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
-    s = "98";
-    printf("%lu\n", hash_djb2((unsigned char *)s));
-    printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+    ht = hash_table_create(128);
+    hash_table_set(ht, "betty", "cool");
+    hash_table_set(ht, "betty2", "cool");
+    hash_table_set(ht, "hetairas", "c1");
+    hash_table_set(ht, "mentioner", "vc3");
+	print_hash(ht);
     return (EXIT_SUCCESS);
 }
